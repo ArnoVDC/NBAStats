@@ -1,0 +1,7 @@
+C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\bin\Debug\ConvertCSV.exe.config
+C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\bin\Debug\ConvertCSV.exe
+C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\bin\Debug\ConvertCSV.pdb
+C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\obj\Debug\ConvertCSV.csprojResolveAssemblyReference.cache
+C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\obj\Debug\ConvertCSV.csproj.CoreCompileInputs.cache
+C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\obj\Debug\ConvertCSV.exe
+C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\obj\Debug\ConvertCSV.pdb
