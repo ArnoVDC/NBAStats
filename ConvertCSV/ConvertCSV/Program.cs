@@ -19,6 +19,8 @@ namespace ConvertCSV
             List<CollegeStats> collegeStatsList = new List<CollegeStats>();
             List<AllStats> allStatsList = new List<AllStats>();
 
+            int PlayersNotFound = 0;
+
             //reading first list
             using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\NBAStats.csv"))
             {
@@ -47,6 +49,54 @@ namespace ConvertCSV
                     line = reader.ReadLine();
                 }
             }//end read nba stats
+
+            using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\laatsteStuks.csv"))
+            {
+                reader.ReadLine(); //ignore first line
+                reader.ReadLine();
+
+
+                string line = reader.ReadLine();
+                while (line != null)
+                {
+                    string[] parts = line.Split(',');
+
+                    CollegeStats c = new CollegeStats();
+
+                    //Rk,Player,Class,Season,Pos,School,Conf,G,MP,FG,FGA,2P,2PA,3P,3PA,FT,FTA,ORB,DRB,TRB,AST,STL,BLK,TOV,PF,PTS
+
+                    c.Player = parts[1];
+                    c.Class = parts[2];
+                    c.Season = parts[3];
+                    c.pos = parts[4];
+                    c.school = parts[5];
+
+                    c.Games = int.Parse(parts[7]);
+                    c.Mp = (parts[8] != "") ? int.Parse(parts[8]) : 0;
+                    c.FG = int.Parse(parts[9]);
+                    c.FGA = int.Parse(parts[10]);
+                    c.twop = (parts[11] != "") ?  int.Parse(parts[11]): 0;
+                    c.twoPA = (parts[12] != "") ?  int.Parse(parts[12]): 0;
+                    c.treeP = (parts[13] != "") ?  int.Parse(parts[13]): 0;
+                    c.treePA = (parts[14] != "")?  int.Parse(parts[14]): 0;
+                    c.FT = int.Parse(parts[15]);
+                    c.FTA = int.Parse(parts[16]);
+                    c.ORB = (parts[17] != "") ? int.Parse(parts[17]) : 0;
+                    c.DRB = (parts[18] != "") ? int.Parse(parts[18]) : 0;
+                    c.TRB = int.Parse(parts[19]);
+                    c.AST = int.Parse(parts[20]);
+                    c.STL = int.Parse(parts[21]);
+                    c.BLK = int.Parse(parts[22]);
+                    c.TOV = (parts[23] != "") ? int.Parse(parts[23]) : 0;
+                    c.PF = (parts[24] != "") ? int.Parse(parts[24]) : 0;
+                    c.PTS = int.Parse(parts[25]);
+
+                    collegeStatsList.Add(c);
+
+                    line = reader.ReadLine();
+                }
+            }//end read coll stats
+
 
             using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\CollegeStatsFirst1000.csv"))
             {
@@ -93,7 +143,7 @@ namespace ConvertCSV
 
                     line = reader.ReadLine();
                 }
-            }//end read nba stats
+            }//end read coll2stats
 
             List<int> lst = new List<int>();
             foreach (nbaStat stat in nbaStatList)
@@ -115,7 +165,8 @@ namespace ConvertCSV
                         lstNewCstat.Add(cstat);
                     }
                 }
-
+                if (found == 0)
+                    Console.WriteLine("Not found count: " + PlayersNotFound ++);
                 if (found == 1)
                 {
                     newCstat = lstNewCstat[0];
@@ -174,8 +225,6 @@ namespace ConvertCSV
 
                     for(int i = 0; i <found; i++)
                     {
-                        Console.WriteLine(lstNewCstat[i].school + " - " + stat.College);
-
                         p.Games += lstNewCstat[i].Games;
                         p.Mp += lstNewCstat[i].Mp;
                         p.FG += lstNewCstat[i].FG;
