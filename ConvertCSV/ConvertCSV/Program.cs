@@ -74,7 +74,7 @@ namespace ConvertCSV
                     c.pos = parts[4];
                     c.school = parts[5];
 
-                    c.Games = int.Parse(parts[7]);
+                    c.Games = (parts[7] != "")? int.Parse(parts[7]): 0;
                     c.Mp = (parts[8] != "") ? int.Parse(parts[8]) : 0;
                     c.FG = int.Parse(parts[9]);
                     c.FGA = int.Parse(parts[10]);
