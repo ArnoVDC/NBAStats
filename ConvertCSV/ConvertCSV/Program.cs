@@ -165,7 +165,7 @@ namespace ConvertCSV
                         lstNewCstat.Add(cstat);
                     }
                 }
-                if (found == 0)
+                if (found == 0 && stat.Year != 1992)
                     Console.WriteLine("Not found count: " + PlayersNotFound ++);
                 if (found == 1)
                 {
@@ -247,6 +247,7 @@ namespace ConvertCSV
                     }
 
                     allStatsList.Add(p);
+
 
                 }
 
