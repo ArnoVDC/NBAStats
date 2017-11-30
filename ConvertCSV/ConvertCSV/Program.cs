@@ -74,7 +74,7 @@ namespace ConvertCSV
                     c.pos = parts[4];
                     c.school = parts[5];
 
-                    c.Games = (parts[7] != "")? int.Parse(parts[7]): 0;
+                    c.Games = (parts[7] != "") ? int.Parse(parts[7]) : 0;
                     c.Mp = (parts[8] != "") ? int.Parse(parts[8]) : 0;
                     c.FG = int.Parse(parts[9]);
                     c.FGA = int.Parse(parts[10]);
@@ -154,52 +154,65 @@ namespace ConvertCSV
             for (int i = collegeStatsList.Count - 1; i >= 0; i--)
             {
                 List<int> lstFoundi = new List<int>();
-                for (int j = 0; j < collegeStatsList.Count; j++)
+                bool inList = false;
+                for (int j = 0; j < freshCollegeList.Count; j++)
                 {
-                    if (collegeStatsList[i].Player == collegeStatsList[j].Player
-                        && collegeStatsList[i].Season != collegeStatsList[j].Season)
+                    if (collegeStatsList[i].Player == freshCollegeList[j].Player) inList = true;
+
+                }
+
+                if (!inList)
+                {
+                    for (int j = 0; j < collegeStatsList.Count; j++)
                     {
-                        lstFoundi.Add(j);
+                        if (collegeStatsList[i].Player == collegeStatsList[j].Player
+                            && collegeStatsList[i].Season != collegeStatsList[j].Season)
+                        {
+                            lstFoundi.Add(j);
+                        }
                     }
+
+                    CollegeStats fCollegePlayer = collegeStatsList[i];
+                    int s = lstFoundi.Count + 1;
+                    fCollegePlayer.Season = s.ToString();
+
+
+                    foreach (int k in lstFoundi)
+                    {
+                        fCollegePlayer.Games += collegeStatsList[k].Games;
+                        fCollegePlayer.Mp += collegeStatsList[k].Mp;
+                        fCollegePlayer.FG += collegeStatsList[k].FG;
+                        fCollegePlayer.twop += collegeStatsList[k].twop;
+                        fCollegePlayer.twoPA += collegeStatsList[k].twoPA;
+                        fCollegePlayer.treeP += collegeStatsList[k].treeP;
+                        fCollegePlayer.treePA += collegeStatsList[k].treePA;
+                        fCollegePlayer.FT += collegeStatsList[k].FT;
+                        fCollegePlayer.FTA += collegeStatsList[k].FTA;
+                        fCollegePlayer.DRB += collegeStatsList[k].DRB;
+                        fCollegePlayer.ORB += collegeStatsList[k].ORB;
+                        fCollegePlayer.TRB += collegeStatsList[k].TRB;
+                        fCollegePlayer.AST += collegeStatsList[k].AST;
+                        fCollegePlayer.STL += collegeStatsList[k].STL;
+                        fCollegePlayer.BLK += collegeStatsList[k].BLK;
+                        fCollegePlayer.TOV += collegeStatsList[k].TOV;
+                        fCollegePlayer.PF += collegeStatsList[k].PF;
+                        fCollegePlayer.PTS += collegeStatsList[k].PTS;
+                    }
+                    freshCollegeList.Add(fCollegePlayer);
                 }
-                CollegeStats fCollegePlayer = collegeStatsList[i];
-                int s = lstFoundi.Count + 1;
-                fCollegePlayer.Season =s.ToString();
-                foreach (int k in lstFoundi)
-                {
-                    fCollegePlayer.Games += collegeStatsList[k].Games;
-                    fCollegePlayer.Mp += collegeStatsList[k].Mp;
-                    fCollegePlayer.FG += collegeStatsList[k].FG;
-                    fCollegePlayer.twop += collegeStatsList[k].twop;
-                    fCollegePlayer.twoPA += collegeStatsList[k].twoPA;
-                    fCollegePlayer.treeP += collegeStatsList[k].treeP;
-                    fCollegePlayer.treePA += collegeStatsList[k].treePA;
-                    fCollegePlayer.FT += collegeStatsList[k].FT;
-                    fCollegePlayer.FTA += collegeStatsList[k].FTA;
-                    fCollegePlayer.DRB += collegeStatsList[k].DRB;
-                    fCollegePlayer.ORB += collegeStatsList[k].ORB;
-                    fCollegePlayer.TRB += collegeStatsList[k].TRB;
-                    fCollegePlayer.AST += collegeStatsList[k].AST;
-                    fCollegePlayer.STL += collegeStatsList[k].STL;
-                    fCollegePlayer.BLK += collegeStatsList[k].BLK;
-                    fCollegePlayer.TOV += collegeStatsList[k].TOV;
-                    fCollegePlayer.PF += collegeStatsList[k].PF;
-                    fCollegePlayer.PTS += collegeStatsList[k].PTS;
-                }
-                freshCollegeList.Add(fCollegePlayer);
             }
 
 
             Console.WriteLine("Searching picked players");
             //search if player is picked
-            foreach(CollegeStats pl in freshCollegeList)
+            foreach (CollegeStats pl in freshCollegeList)
             {
                 pl.Picked = false;
                 string[] name = pl.Player.Split('\\');
                 foreach (nbaStat nbaPlayer in nbaStatList)
                 {
                     string[] name2 = nbaPlayer.Player.Split('\\');
-                    if(name[0] == name2[0])
+                    if (name[0] == name2[0])
                     {
                         //player in nba
                         pl.Picked = true;
@@ -216,10 +229,12 @@ namespace ConvertCSV
                     "FT, FTA, ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS, Picked");
 
 
-             
+
 
                 foreach (CollegeStats s in freshCollegeList)
                 {
+                    int pick = 0;
+                    if (s.Picked) pick = 1;
                     string line = s.Player + ","
                         + s.Class + ","
                         + s.Season + ","
@@ -244,7 +259,7 @@ namespace ConvertCSV
                         + s.TOV + ","
                         + s.PF + ","
                         + s.PTS + ","
-                        + s.Picked;
+                        + pick;
                     writer.WriteLine(line);
                     writer.Flush();
                 }
