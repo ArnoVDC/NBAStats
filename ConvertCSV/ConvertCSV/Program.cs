@@ -18,9 +18,11 @@ namespace ConvertCSV
 
             List<CollegeStats> collegeStatsList = new List<CollegeStats>();
             List<AllStats> allStatsList = new List<AllStats>();
+            List<CollegeStats> freshCollegeList = new List<CollegeStats>();
 
             int PlayersNotFound = 0;
 
+            Console.WriteLine("Reading NBA Stats");
             //reading first list
             using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\NBAStats.csv"))
             {
@@ -50,6 +52,7 @@ namespace ConvertCSV
                 }
             }//end read nba stats
 
+            Console.WriteLine("Reading College Stats");
             using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\laatsteStuks.csv"))
             {
                 reader.ReadLine(); //ignore first line
@@ -75,10 +78,10 @@ namespace ConvertCSV
                     c.Mp = (parts[8] != "") ? int.Parse(parts[8]) : 0;
                     c.FG = int.Parse(parts[9]);
                     c.FGA = int.Parse(parts[10]);
-                    c.twop = (parts[11] != "") ?  int.Parse(parts[11]): 0;
-                    c.twoPA = (parts[12] != "") ?  int.Parse(parts[12]): 0;
-                    c.treeP = (parts[13] != "") ?  int.Parse(parts[13]): 0;
-                    c.treePA = (parts[14] != "")?  int.Parse(parts[14]): 0;
+                    c.twop = (parts[11] != "") ? int.Parse(parts[11]) : 0;
+                    c.twoPA = (parts[12] != "") ? int.Parse(parts[12]) : 0;
+                    c.treeP = (parts[13] != "") ? int.Parse(parts[13]) : 0;
+                    c.treePA = (parts[14] != "") ? int.Parse(parts[14]) : 0;
                     c.FT = int.Parse(parts[15]);
                     c.FTA = int.Parse(parts[16]);
                     c.ORB = (parts[17] != "") ? int.Parse(parts[17]) : 0;
@@ -145,136 +148,83 @@ namespace ConvertCSV
                 }
             }//end read coll2stats
 
-            List<int> lst = new List<int>();
-            foreach (nbaStat stat in nbaStatList)
+
+            Console.WriteLine("Combining seasons");
+            //add season stats from players;
+            for (int i = collegeStatsList.Count - 1; i >= 0; i--)
             {
-                int found = 0;
-                //all nba pics in stat
-
-                CollegeStats newCstat = new CollegeStats();
-                List<CollegeStats> lstNewCstat = new List<CollegeStats>();
-
-                foreach (CollegeStats cstat in collegeStatsList)
+                List<int> lstFoundi = new List<int>();
+                for (int j = 0; j < collegeStatsList.Count; j++)
                 {
-                    string[] p1 = stat.Player.Split('\\');
-                    string[] p2 = cstat.Player.Split('\\');
-                    if (p1[0] == p2[0])
+                    if (collegeStatsList[i].Player == collegeStatsList[j].Player
+                        && collegeStatsList[i].Season != collegeStatsList[j].Season)
                     {
-                        found++;
-                        //Console.WriteLine("found");
-                        lstNewCstat.Add(cstat);
+                        lstFoundi.Add(j);
                     }
                 }
-                if (found == 0 && stat.Year != 1992)
-                    Console.WriteLine("Not found count: " + PlayersNotFound ++);
-                if (found == 1)
+                CollegeStats fCollegePlayer = collegeStatsList[i];
+                int s = lstFoundi.Count + 1;
+                fCollegePlayer.Season =s.ToString();
+                foreach (int k in lstFoundi)
                 {
-                    newCstat = lstNewCstat[0];
-                    AllStats p = new AllStats();
-
-                    p.Year = stat.Year;
-                    p.Lg = stat.Lg;
-                    p.Rd = stat.Rd;
-                    p.Pk = stat.Pk;
-                    p.Tm = stat.Tm;
-                    p.Player = stat.Player;
-                    p.age = stat.age;
-                    p.pos = stat.pos;
-                    p.College = stat.College;
-                    p.Class = newCstat.Class;
-                    p.Season = 1;
-                    p.Games = newCstat.Games;
-                    p.Mp = newCstat.Mp;
-                    p.FG = newCstat.FG;
-                    p.FGA = newCstat.FGA;
-                    p.twop = newCstat.twop;
-                    p.twoPA = newCstat.twoPA;
-                    p.treeP = newCstat.treeP;
-                    p.treePA = newCstat.treePA;
-                    p.FT = newCstat.FT;
-                    p.FTA = newCstat.FTA;
-                    p.ORB = newCstat.ORB;
-                    p.DRB = newCstat.DRB;
-                    p.TRB = newCstat.TRB;
-                    p.AST = newCstat.AST;
-                    p.STL = newCstat.STL;
-                    p.BLK = newCstat.BLK;
-                    p.TOV = newCstat.TOV;
-                    p.PF = newCstat.PF;
-                    p.PTS = newCstat.PTS;
-
-                    allStatsList.Add(p);
+                    fCollegePlayer.Games += collegeStatsList[k].Games;
+                    fCollegePlayer.Mp += collegeStatsList[k].Mp;
+                    fCollegePlayer.FG += collegeStatsList[k].FG;
+                    fCollegePlayer.twop += collegeStatsList[k].twop;
+                    fCollegePlayer.twoPA += collegeStatsList[k].twoPA;
+                    fCollegePlayer.treeP += collegeStatsList[k].treeP;
+                    fCollegePlayer.treePA += collegeStatsList[k].treePA;
+                    fCollegePlayer.FT += collegeStatsList[k].FT;
+                    fCollegePlayer.FTA += collegeStatsList[k].FTA;
+                    fCollegePlayer.DRB += collegeStatsList[k].DRB;
+                    fCollegePlayer.ORB += collegeStatsList[k].ORB;
+                    fCollegePlayer.TRB += collegeStatsList[k].TRB;
+                    fCollegePlayer.AST += collegeStatsList[k].AST;
+                    fCollegePlayer.STL += collegeStatsList[k].STL;
+                    fCollegePlayer.BLK += collegeStatsList[k].BLK;
+                    fCollegePlayer.TOV += collegeStatsList[k].TOV;
+                    fCollegePlayer.PF += collegeStatsList[k].PF;
+                    fCollegePlayer.PTS += collegeStatsList[k].PTS;
                 }
-                if(found > 1)
-                {
-                    found--;
-
-                    AllStats p = new AllStats();
-
-                    p.Year = stat.Year;
-                    p.Lg = stat.Lg;
-                    p.Rd = stat.Rd;
-                    p.Pk = stat.Pk;
-                    p.Tm = stat.Tm;
-                    p.Player = stat.Player;
-                    p.age = stat.age;
-                    p.pos = stat.pos;
-                    p.College = stat.College;
-                    p.Class = lstNewCstat[found].Class;
-                    p.Season = found + 1;
-
-                    for(int i = 0; i <found; i++)
-                    {
-                        p.Games += lstNewCstat[i].Games;
-                        p.Mp += lstNewCstat[i].Mp;
-                        p.FG += lstNewCstat[i].FG;
-                        p.FGA += lstNewCstat[i].FGA;
-                        p.twop += lstNewCstat[i].twop;
-                        p.twoPA += lstNewCstat[i].twoPA;
-                        p.treeP += lstNewCstat[i].treeP;
-                        p.treePA += lstNewCstat[i].treePA;
-                        p.FT += lstNewCstat[i].FT;
-                        p.FTA += lstNewCstat[i].FTA;
-                        p.ORB += lstNewCstat[i].ORB;
-                        p.DRB += lstNewCstat[i].DRB;
-                        p.TRB += lstNewCstat[i].TRB;
-                        p.AST += lstNewCstat[i].AST;
-                        p.STL += lstNewCstat[i].STL;
-                        p.BLK += lstNewCstat[i].BLK;
-                        p.TOV += lstNewCstat[i].TOV;
-                        p.PF += lstNewCstat[i].PF;
-                        p.PTS += lstNewCstat[i].PTS;
-                    }
-
-                    allStatsList.Add(p);
-
-
-                }
-
-               
+                freshCollegeList.Add(fCollegePlayer);
             }
 
 
+            Console.WriteLine("Searching picked players");
+            //search if player is picked
+            foreach(CollegeStats pl in freshCollegeList)
+            {
+                pl.Picked = false;
+                string[] name = pl.Player.Split('\\');
+                foreach (nbaStat nbaPlayer in nbaStatList)
+                {
+                    string[] name2 = nbaPlayer.Player.Split('\\');
+                    if(name[0] == name2[0])
+                    {
+                        //player in nba
+                        pl.Picked = true;
+                    }
+                }
+            }
+
+            Console.WriteLine("Writing file");
             //write csv
             using (var writer = new StreamWriter(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\Output.csv"))
             {
                 //headers
-                writer.WriteLine("Year, Pick, Team, Player, Age, Position, College, Class, Season, Games, Minutes, FG, FGA, 2points," +
-                    " 2points a, 3points, 3points a, FreeTrow, FreeTrow a, Offensive rebounds, Defensive rebounds," +
-                    " Total rebounds, Assists, Steal, Blocks, Turnover, Fouls, Points");
+                writer.WriteLine("Player, Class, Season, Position, School, Games, Minutes, FG, FGA, 2P, 2PA, 3P, 3PA" +
+                    "FT, FTA, ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS, Picked");
 
 
-                foreach(AllStats s in allStatsList)
+             
+
+                foreach (CollegeStats s in freshCollegeList)
                 {
-                    string line = s.Year + ","
-                        + s.Pk + ","
-                        + s.Tm + ","
-                        + s.Player + ","
-                        + s.age + ","
-                        + s.pos + ","
-                        + s.College + ","
+                    string line = s.Player + ","
                         + s.Class + ","
                         + s.Season + ","
+                        + s.pos + ","
+                        + s.school + ","
                         + s.Games + ","
                         + s.Mp + ","
                         + s.FG + ","
@@ -293,14 +243,15 @@ namespace ConvertCSV
                         + s.BLK + ","
                         + s.TOV + ","
                         + s.PF + ","
-                        + s.PTS;
+                        + s.PTS + ","
+                        + s.Picked;
                     writer.WriteLine(line);
                     writer.Flush();
                 }
             }
 
 
-
+            Console.WriteLine("Done!");
             Console.ReadLine();
         }
     }
@@ -312,7 +263,7 @@ namespace ConvertCSV
         public string Lg;
         public int Rd;
         public int Pk;
-        public String Tm;
+        public string Tm;
         public string Player;
         public string age;
         public string pos;
@@ -344,7 +295,6 @@ namespace ConvertCSV
     {
         public string Player;
         public string Class;
-
         public String Season;
         public string pos;
         public string school;
@@ -367,6 +317,7 @@ namespace ConvertCSV
         public int TOV;
         public int PF;
         public int PTS;
+        public bool Picked;
     }
 
     class nbaStat
