@@ -225,8 +225,8 @@ namespace ConvertCSV
             using (var writer = new StreamWriter(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\Output.csv"))
             {
                 //headers
-                writer.WriteLine("Player, Class, Season, Position, School, Games, Minutes, FG, FGA, 2P, 2PA, 3P, 3PA" +
-                    "FT, FTA, ORB, DRB, TRB, AST, STL, BLK, TOV, PF, PTS, Picked");
+                writer.WriteLine("Player,Class,Season,Position,School,Games,Minutes,FG,FGA,2P,2PA,3P,3PA," +
+                    "FT,FTA,ORB,DRB,TRB,AST,STL,BLK,TOV,PF,PTS,Picked");
 
 
 
