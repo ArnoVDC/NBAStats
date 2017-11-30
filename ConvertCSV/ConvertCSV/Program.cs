@@ -246,6 +246,11 @@ namespace ConvertCSV
                         p.PTS += lstNewCstat[i].PTS;
                     }
 
+                    if (p.Rd == 2)
+                    {
+                        p.Pk += 30;
+                    }
+
                     allStatsList.Add(p);
 
                 }
@@ -258,7 +263,7 @@ namespace ConvertCSV
             using (var writer = new StreamWriter(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\Output.csv"))
             {
                 //headers
-                writer.WriteLine("Year, Round, Pick, Team, Player, Age, Position, College, Class, Season, Games, Minutes, FG, FGA, 2points," +
+                writer.WriteLine("Year, Pick, Team, Player, Age, Position, College, Class, Season, Games, Minutes, FG, FGA, 2points," +
                     " 2points a, 3points, 3points a, FreeTrow, FreeTrow a, Offensive rebounds, Defensive rebounds," +
                     " Total rebounds, Assists, Steal, Blocks, Turnover, Fouls, Points");
 
@@ -266,7 +271,6 @@ namespace ConvertCSV
                 foreach(AllStats s in allStatsList)
                 {
                     string line = s.Year + ","
-                        + s.Rd + ","
                         + s.Pk + ","
                         + s.Tm + ","
                         + s.Player + ","
