@@ -254,6 +254,53 @@ namespace ConvertCSV
             }
 
 
+            //write csv
+            using (var writer = new StreamWriter(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\Output.csv"))
+            {
+                //headers
+                writer.WriteLine("Year, Round, Pick, Team, Player, Age, Position, College, Class, Season, Games, Minutes, FG, FGA, 2points," +
+                    " 2points a, 3points, 3points a, FreeTrow, FreeTrow a, Offensive rebounds, Defensive rebounds," +
+                    " Total rebounds, Assists, Steal, Blocks, Turnover, Fouls, Points");
+
+
+                foreach(AllStats s in allStatsList)
+                {
+                    string line = s.Year + ","
+                        + s.Rd + ","
+                        + s.Pk + ","
+                        + s.Tm + ","
+                        + s.Player + ","
+                        + s.age + ","
+                        + s.pos + ","
+                        + s.College + ","
+                        + s.Class + ","
+                        + s.Season + ","
+                        + s.Games + ","
+                        + s.Mp + ","
+                        + s.FG + ","
+                        + s.FGA + ","
+                        + s.twop + ","
+                        + s.twoPA + ","
+                        + s.treeP + ","
+                        + s.treePA + ","
+                        + s.FT + ","
+                        + s.FTA + ","
+                        + s.ORB + ","
+                        + s.DRB + ","
+                        + s.TRB + ","
+                        + s.AST + ","
+                        + s.STL + ","
+                        + s.BLK + ","
+                        + s.TOV + ","
+                        + s.PF + ","
+                        + s.PTS;
+                    writer.WriteLine(line);
+                    writer.Flush();
+                }
+            }
+
+
+
             Console.ReadLine();
         }
     }
