@@ -246,11 +246,6 @@ namespace ConvertCSV
                         p.PTS += lstNewCstat[i].PTS;
                     }
 
-                    if (p.Rd == 2)
-                    {
-                        p.Pk += 30;
-                    }
-
                     allStatsList.Add(p);
 
                 }
