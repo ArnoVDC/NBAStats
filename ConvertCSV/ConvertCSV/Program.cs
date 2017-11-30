@@ -198,6 +198,7 @@ namespace ConvertCSV
                         fCollegePlayer.PF += collegeStatsList[k].PF;
                         fCollegePlayer.PTS += collegeStatsList[k].PTS;
                     }
+                    if (fCollegePlayer.school == @"Louisiana-Monroe") fCollegePlayer.school = "LouisianaMonroe";
                     freshCollegeList.Add(fCollegePlayer);
                 }
             }
