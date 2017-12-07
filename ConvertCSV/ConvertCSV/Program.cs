@@ -163,8 +163,7 @@ namespace ConvertCSV
             {
                 //headers
                 writer.WriteLine("Player,Class,Season,Position,School,Games,FG,2P,3P," +
-                    "FT,TRB,AST,STL,BLK,PTS,Picked" + addTitle);
-
+                    "FT,TRB,AST,STL,BLK,PTS" + addTitle + ",Picked");
 
 
 
@@ -193,14 +192,15 @@ namespace ConvertCSV
                         + s.STL + ","
                         + s.BLK + ","
 
-                        + s.PTS + ","
-                        + pick;
+                        + s.PTS;
 
                     for(int i = 0; i< _schools.Count; i++)
                     {
                         if (s.schoolId == i) line += ",1";
                         else line += ",0";
                     }
+
+                    line += ","+ s.Picked;
                     writer.WriteLine(line);
                     writer.Flush();
                 }
