@@ -200,7 +200,7 @@ namespace ConvertCSV
                         else line += ",0";
                     }
 
-                    line += ","+ s.Picked;
+                    line += "," + pick;
                     writer.WriteLine(line);
                     writer.Flush();
                 }
