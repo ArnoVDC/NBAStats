@@ -76,12 +76,19 @@ namespace ConvertCSV
 
                     c.FG = int.Parse(parts[8]) / s;
                     c.FGA = int.Parse(parts[9]) / s;
+                    c.FG = c.FG / c.FGA;
+
                     c.twop = int.Parse(parts[10]) / s;
                     c.twoPA = int.Parse(parts[11]) / s;
+                    c.twop = c.twop / c.twoPA;
+
                     c.treeP = int.Parse(parts[12]) / s;
                     c.treePA = int.Parse(parts[13]) / s;
+                    c.treeP = c.treeP / c.treePA;
+
                     c.FT = int.Parse(parts[14]) / s;
                     c.FTA = int.Parse(parts[15]) / s;
+                    c.FT = c.FT / c.FTA;
                     //orb and drb do not count
                     c.TRB = int.Parse(parts[18]) / s;
                     c.AST = int.Parse(parts[19]) / s;
@@ -98,7 +105,7 @@ namespace ConvertCSV
             }//end read college stats
 
 
-          
+
 
             Console.WriteLine("Searching picked players");
             //search if player is picked
@@ -122,8 +129,8 @@ namespace ConvertCSV
             using (var writer = new StreamWriter(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\Output.csv"))
             {
                 //headers
-                writer.WriteLine("Player,Class,Season,Position,School,Games,FG,FGA,2P,2PA,3P,3PA," +
-                    "FT,FTA,TRB,AST,STL,BLK,PTS,Picked");
+                writer.WriteLine("Player,Class,Season,Position,School,Games,FG,2P,3P," +
+                    "FT,TRB,AST,STL,BLK,PTS,Picked");
 
 
 
@@ -138,21 +145,21 @@ namespace ConvertCSV
                         + s.pos + ","
                         + s.school + ","
                         + s.Games + ","
-                        
+
                         + s.FG + ","
-                        + s.FGA + ","
+
                         + s.twop + ","
-                        + s.twoPA + ","
+
                         + s.treeP + ","
-                        + s.treePA + ","
+
                         + s.FT + ","
-                        + s.FTA + ","
-                       
+
+
                         + s.TRB + ","
                         + s.AST + ","
                         + s.STL + ","
                         + s.BLK + ","
-                       
+
                         + s.PTS + ","
                         + pick;
                     writer.WriteLine(line);
