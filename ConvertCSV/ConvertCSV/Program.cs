@@ -76,19 +76,19 @@ namespace ConvertCSV
 
                     c.FG = int.Parse(parts[8]) / s;
                     c.FGA = int.Parse(parts[9]) / s;
-                    c.FG = c.FG / c.FGA;
+                    c.FG = Math.Round(c.FG / c.FGA * 100,0);
 
                     c.twop = int.Parse(parts[10]) / s;
                     c.twoPA = int.Parse(parts[11]) / s;
-                    c.twop = c.twop / c.twoPA;
+                    c.twop = Math.Round(c.twop / c.twoPA * 100, 0);
 
                     c.treeP = int.Parse(parts[12]) / s;
                     c.treePA = int.Parse(parts[13]) / s;
-                    c.treeP = c.treeP / c.treePA;
+                    c.treeP = Math.Round(c.treeP / c.treePA * 100, 0);
 
                     c.FT = int.Parse(parts[14]) / s;
                     c.FTA = int.Parse(parts[15]) / s;
-                    c.FT = c.FT / c.FTA;
+                    c.FT = Math.Round(c.FT / c.FTA * 100, 0);
                     //orb and drb do not count
                     c.TRB = int.Parse(parts[18]) / s;
                     c.AST = int.Parse(parts[19]) / s;
