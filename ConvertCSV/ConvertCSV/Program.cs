@@ -76,19 +76,23 @@ namespace ConvertCSV
 
                     c.FG = int.Parse(parts[8]) / s;
                     c.FGA = int.Parse(parts[9]) / s;
-                    c.FG = Math.Round(c.FG / c.FGA * 100,0);
+                    c.FG = Math.Round(c.FG / c.FGA * 100 ,0);
+                    if (c.FGA == 0) c.FG = 0;
 
                     c.twop = int.Parse(parts[10]) / s;
                     c.twoPA = int.Parse(parts[11]) / s;
                     c.twop = Math.Round(c.twop / c.twoPA * 100, 0);
+                    if (c.twoPA == 0) c.twop = 0;
 
                     c.treeP = int.Parse(parts[12]) / s;
                     c.treePA = int.Parse(parts[13]) / s;
                     c.treeP = Math.Round(c.treeP / c.treePA * 100, 0);
+                    if (c.treePA == 0) c.treeP = 0;
 
                     c.FT = int.Parse(parts[14]) / s;
                     c.FTA = int.Parse(parts[15]) / s;
                     c.FT = Math.Round(c.FT / c.FTA * 100, 0);
+                    if (c.FTA == 0) c.FT = 0;
                     //orb and drb do not count
                     c.TRB = int.Parse(parts[18]) / s;
                     c.AST = int.Parse(parts[19]) / s;
@@ -97,8 +101,11 @@ namespace ConvertCSV
                     //c.TOV = int.Parse(parts[22]);
                     //c.PF = int.Parse(parts[23]);
                     c.PTS = int.Parse(parts[24]) / s;
-
-
+                    
+                    if(c.Player == @"Omar Cooper\omar-cooper-1")
+                    {
+                        Console.WriteLine("here");
+                    }
                     collegeStatsList.Add(c);
                     line = reader.ReadLine();
                 }
