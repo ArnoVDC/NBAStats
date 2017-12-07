@@ -163,7 +163,7 @@ namespace ConvertCSV
             {
                 //headers
                 writer.WriteLine("Player,Class,Season,Position,School,Games,FG,2P,3P," +
-                    "FT,TRB,AST,STL,BLK,PTS" + addTitle + ",Picked");
+                    "FT,TRB,AST,STL,BLK,PTS" + addTitle + "Picked");
 
 
 
