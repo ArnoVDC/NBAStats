@@ -19,6 +19,7 @@ namespace ConvertCSV
             List<CollegeStats> collegeStatsList = new List<CollegeStats>();
             List<AllStats> allStatsList = new List<AllStats>();
             List<CollegeStats> freshCollegeList = new List<CollegeStats>();
+            List<String> _schools = new List<string>();
 
             int PlayersNotFound = 0;
 
@@ -76,7 +77,7 @@ namespace ConvertCSV
 
                     c.FG = int.Parse(parts[8]) / s;
                     c.FGA = int.Parse(parts[9]) / s;
-                    c.FG = Math.Round(c.FG / c.FGA * 100 ,0);
+                    c.FG = Math.Round(c.FG / c.FGA * 100, 0);
                     if (c.FGA == 0) c.FG = 0;
 
                     c.twop = int.Parse(parts[10]) / s;
@@ -101,8 +102,8 @@ namespace ConvertCSV
                     //c.TOV = int.Parse(parts[22]);
                     //c.PF = int.Parse(parts[23]);
                     c.PTS = int.Parse(parts[24]) / s;
-                    
-                    if(c.Player == @"Omar Cooper\omar-cooper-1")
+
+                    if (c.Player == @"Omar Cooper\omar-cooper-1")
                     {
                         Console.WriteLine("here");
                     }
@@ -111,7 +112,25 @@ namespace ConvertCSV
                 }
             }//end read college stats
 
+            Console.WriteLine("getting schools");
+            foreach (CollegeStats pl in collegeStatsList)
+            {
+                bool f = false;
+                for (int i = 0; i < _schools.Count; i++)
+                {
+                    if (pl.school == _schools[i])
+                    {
+                        f = true;
+                        pl.schoolId = i;
+                    }
+                }
 
+                if (!f) {
+                    _schools.Add(pl.school);
+                    pl.schoolId = _schools.Count - 1;
+                        
+                        };
+            }
 
 
             Console.WriteLine("Searching picked players");
@@ -130,6 +149,13 @@ namespace ConvertCSV
                     }
                 }
             }
+            string addTitle = ",";
+            foreach(String s in _schools)
+            {
+                addTitle += s + ",";
+            }
+            addTitle.Substring(0, addTitle.Length -1);
+
 
             Console.WriteLine("Writing file");
             //write csv
@@ -137,7 +163,7 @@ namespace ConvertCSV
             {
                 //headers
                 writer.WriteLine("Player,Class,Season,Position,School,Games,FG,2P,3P," +
-                    "FT,TRB,AST,STL,BLK,PTS,Picked");
+                    "FT,TRB,AST,STL,BLK,PTS,Picked" + addTitle);
 
 
 
@@ -169,6 +195,12 @@ namespace ConvertCSV
 
                         + s.PTS + ","
                         + pick;
+
+                    for(int i = 0; i< _schools.Count; i++)
+                    {
+                        if (s.schoolId == i) line += ",1";
+                        else line += ",0";
+                    }
                     writer.WriteLine(line);
                     writer.Flush();
                 }
@@ -242,6 +274,7 @@ namespace ConvertCSV
         public double PF;
         public double PTS;
         public bool Picked;
+        public int schoolId;
     }
 
     class nbaStat
