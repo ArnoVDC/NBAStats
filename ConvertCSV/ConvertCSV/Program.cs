@@ -53,7 +53,7 @@ namespace ConvertCSV
             }//end read nba stats
 
             Console.WriteLine("Reading College Stats");
-            using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\laatsteStuks.csv"))
+            using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\College.csv"))
             {
                 reader.ReadLine(); //ignore first line
                 reader.ReadLine();
@@ -65,149 +65,44 @@ namespace ConvertCSV
                     string[] parts = line.Split(',');
 
                     CollegeStats c = new CollegeStats();
-
-                    //Rk,Player,Class,Season,Pos,School,Conf,G,MP,FG,FGA,2P,2PA,3P,3PA,FT,FTA,ORB,DRB,TRB,AST,STL,BLK,TOV,PF,PTS
-
                     c.Player = parts[1];
-                    c.Class = parts[2];
-                    c.Season = parts[3];
-                    c.pos = parts[4];
-                    c.school = parts[5];
+                    int s = int.Parse(parts[3]) - int.Parse(parts[2]) + 1;
+                    c.Season = s;
+                    c.school = parts[4];
+                    //Conf,G,MP,FG,FGA,2P,2PA,3P,3PA,FT,FTA,ORB,DRB,TRB,AST,STL,BLK,TOV,PF,PTS
+                    c.Class = parts[5];
+                    c.Games = int.Parse(parts[6]) / s;
+                    //c.Mp = int.Parse(parts[7]);
 
-                    c.Games = (parts[7] != "") ? int.Parse(parts[7]) : 0;
-                    c.Mp = (parts[8] != "") ? int.Parse(parts[8]) : 0;
-                    c.FG = int.Parse(parts[9]);
-                    c.FGA = int.Parse(parts[10]);
-                    c.twop = (parts[11] != "") ? int.Parse(parts[11]) : 0;
-                    c.twoPA = (parts[12] != "") ? int.Parse(parts[12]) : 0;
-                    c.treeP = (parts[13] != "") ? int.Parse(parts[13]) : 0;
-                    c.treePA = (parts[14] != "") ? int.Parse(parts[14]) : 0;
-                    c.FT = int.Parse(parts[15]);
-                    c.FTA = int.Parse(parts[16]);
-                    c.ORB = (parts[17] != "") ? int.Parse(parts[17]) : 0;
-                    c.DRB = (parts[18] != "") ? int.Parse(parts[18]) : 0;
-                    c.TRB = int.Parse(parts[19]);
-                    c.AST = int.Parse(parts[20]);
-                    c.STL = int.Parse(parts[21]);
-                    c.BLK = int.Parse(parts[22]);
-                    c.TOV = (parts[23] != "") ? int.Parse(parts[23]) : 0;
-                    c.PF = (parts[24] != "") ? int.Parse(parts[24]) : 0;
-                    c.PTS = int.Parse(parts[25]);
+                    c.FG = int.Parse(parts[8]) / s;
+                    c.FGA = int.Parse(parts[9]) / s;
+                    c.twop = int.Parse(parts[10]) / s;
+                    c.twoPA = int.Parse(parts[11]) / s;
+                    c.treeP = int.Parse(parts[12]) / s;
+                    c.treePA = int.Parse(parts[13]) / s;
+                    c.FT = int.Parse(parts[14]) / s;
+                    c.FTA = int.Parse(parts[15]) / s;
+                    //orb and drb do not count
+                    c.TRB = int.Parse(parts[18]) / s;
+                    c.AST = int.Parse(parts[19]) / s;
+                    c.STL = int.Parse(parts[20]) / s;
+                    c.BLK = int.Parse(parts[21]) / s;
+                    //c.TOV = int.Parse(parts[22]);
+                    //c.PF = int.Parse(parts[23]);
+                    c.PTS = int.Parse(parts[24]) / s;
+
 
                     collegeStatsList.Add(c);
-
                     line = reader.ReadLine();
                 }
-            }//end read coll stats
+            }//end read college stats
 
 
-            using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\CollegeStatsFirst1000.csv"))
-            {
-                reader.ReadLine(); //ignore first line
-                reader.ReadLine();
-
-
-                string line = reader.ReadLine();
-                while (line != null)
-                {
-                    string[] parts = line.Split(',');
-
-                    CollegeStats c = new CollegeStats();
-
-                    //Rk,Player,Class,Season,Pos,School,Conf,G,MP,FG,FGA,2P,2PA,3P,3PA,FT,FTA,ORB,DRB,TRB,AST,STL,BLK,TOV,PF,PTS
-
-                    c.Player = parts[1];
-                    c.Class = parts[2];
-                    c.Season = parts[3];
-                    c.pos = parts[4];
-                    c.school = parts[5];
-
-                    c.Games = int.Parse(parts[7]);
-                    c.Mp = (parts[8] != "") ? int.Parse(parts[8]) : 0;
-                    c.FG = int.Parse(parts[9]);
-                    c.FGA = int.Parse(parts[10]);
-                    c.twop = int.Parse(parts[11]);
-                    c.twoPA = int.Parse(parts[12]);
-                    c.treeP = int.Parse(parts[13]);
-                    c.treePA = int.Parse(parts[14]);
-                    c.FT = int.Parse(parts[15]);
-                    c.FTA = int.Parse(parts[16]);
-                    c.ORB = (parts[17] != "") ? int.Parse(parts[17]) : 0;
-                    c.DRB = (parts[18] != "") ? int.Parse(parts[18]) : 0;
-                    c.TRB = int.Parse(parts[19]);
-                    c.AST = int.Parse(parts[20]);
-                    c.STL = int.Parse(parts[21]);
-                    c.BLK = int.Parse(parts[22]);
-                    c.TOV = (parts[23] != "") ? int.Parse(parts[23]) : 0;
-                    c.PF = (parts[24] != "") ? int.Parse(parts[24]) : 0;
-                    c.PTS = int.Parse(parts[25]);
-
-                    collegeStatsList.Add(c);
-
-                    line = reader.ReadLine();
-                }
-            }//end read coll2stats
-
-
-            Console.WriteLine("Combining seasons");
-            //add season stats from players;
-            for (int i = collegeStatsList.Count - 1; i >= 0; i--)
-            {
-                List<int> lstFoundi = new List<int>();
-                bool inList = false;
-                for (int j = 0; j < freshCollegeList.Count; j++)
-                {
-                    if (collegeStatsList[i].Player == freshCollegeList[j].Player) inList = true;
-
-                }
-
-                if (!inList)
-                {
-                    for (int j = 0; j < collegeStatsList.Count; j++)
-                    {
-                        if (collegeStatsList[i].Player == collegeStatsList[j].Player
-                            && collegeStatsList[i].Season != collegeStatsList[j].Season)
-                        {
-                            lstFoundi.Add(j);
-                        }
-                    }
-
-                    CollegeStats fCollegePlayer = collegeStatsList[i];
-                    int s = lstFoundi.Count + 1;
-                    fCollegePlayer.Season = s.ToString();
-
-
-                    foreach (int k in lstFoundi)
-                    {
-                        fCollegePlayer.Games += collegeStatsList[k].Games;
-                        fCollegePlayer.Mp += collegeStatsList[k].Mp;
-                        fCollegePlayer.FG += collegeStatsList[k].FG;
-                        fCollegePlayer.twop += collegeStatsList[k].twop;
-                        fCollegePlayer.twoPA += collegeStatsList[k].twoPA;
-                        fCollegePlayer.treeP += collegeStatsList[k].treeP;
-                        fCollegePlayer.treePA += collegeStatsList[k].treePA;
-                        fCollegePlayer.FT += collegeStatsList[k].FT;
-                        fCollegePlayer.FTA += collegeStatsList[k].FTA;
-                        fCollegePlayer.DRB += collegeStatsList[k].DRB;
-                        fCollegePlayer.ORB += collegeStatsList[k].ORB;
-                        fCollegePlayer.TRB += collegeStatsList[k].TRB;
-                        fCollegePlayer.AST += collegeStatsList[k].AST;
-                        fCollegePlayer.STL += collegeStatsList[k].STL;
-                        fCollegePlayer.BLK += collegeStatsList[k].BLK;
-                        fCollegePlayer.TOV += collegeStatsList[k].TOV;
-                        fCollegePlayer.PF += collegeStatsList[k].PF;
-                        fCollegePlayer.PTS += collegeStatsList[k].PTS;
-                    }
-                    if (fCollegePlayer.school == @"Louisiana-Monroe") fCollegePlayer.school = "LouisianaMonroe";
-                    if (fCollegePlayer.school == @"Louisiana-Lafayette") fCollegePlayer.school = "LouisianaLafayette";
-                    freshCollegeList.Add(fCollegePlayer);
-                }
-            }
-
+          
 
             Console.WriteLine("Searching picked players");
             //search if player is picked
-            foreach (CollegeStats pl in freshCollegeList)
+            foreach (CollegeStats pl in collegeStatsList)
             {
                 pl.Picked = false;
                 string[] name = pl.Player.Split('\\');
@@ -227,13 +122,13 @@ namespace ConvertCSV
             using (var writer = new StreamWriter(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\Output.csv"))
             {
                 //headers
-                writer.WriteLine("Player,Class,Season,Position,School,Games,Minutes,FG,FGA,2P,2PA,3P,3PA," +
-                    "FT,FTA,ORB,DRB,TRB,AST,STL,BLK,TOV,PF,PTS,Picked");
+                writer.WriteLine("Player,Class,Season,Position,School,Games,FG,FGA,2P,2PA,3P,3PA," +
+                    "FT,FTA,TRB,AST,STL,BLK,PTS,Picked");
 
 
 
 
-                foreach (CollegeStats s in freshCollegeList)
+                foreach (CollegeStats s in collegeStatsList)
                 {
                     int pick = 0;
                     if (s.Picked) pick = 1;
@@ -243,7 +138,7 @@ namespace ConvertCSV
                         + s.pos + ","
                         + s.school + ","
                         + s.Games + ","
-                        + s.Mp + ","
+                        
                         + s.FG + ","
                         + s.FGA + ","
                         + s.twop + ","
@@ -252,14 +147,12 @@ namespace ConvertCSV
                         + s.treePA + ","
                         + s.FT + ","
                         + s.FTA + ","
-                        + s.ORB + ","
-                        + s.DRB + ","
+                       
                         + s.TRB + ","
                         + s.AST + ","
                         + s.STL + ","
                         + s.BLK + ","
-                        + s.TOV + ","
-                        + s.PF + ","
+                       
                         + s.PTS + ","
                         + pick;
                     writer.WriteLine(line);
@@ -312,28 +205,28 @@ namespace ConvertCSV
     {
         public string Player;
         public string Class;
-        public String Season;
+        public int Season;
         public string pos;
         public string school;
-        public int Games;
-        public int Mp;
-        public int FG;
-        public int FGA;
-        public int twop;
-        public int twoPA;
-        public int treeP;
-        public int treePA;
-        public int FT;
-        public int FTA;
-        public int ORB;
-        public int DRB;
-        public int TRB;
-        public int AST;
-        public int STL;
-        public int BLK;
-        public int TOV;
-        public int PF;
-        public int PTS;
+        public double Games;
+        public double Mp;
+        public double FG;
+        public double FGA;
+        public double twop;
+        public double twoPA;
+        public double treeP;
+        public double treePA;
+        public double FT;
+        public double FTA;
+        public double ORB;
+        public double DRB;
+        public double TRB;
+        public double AST;
+        public double STL;
+        public double BLK;
+        public double TOV;
+        public double PF;
+        public double PTS;
         public bool Picked;
     }
 
