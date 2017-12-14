@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1{
+  padding: 0.2em;
+  text-align: center;
+  color: #ffffff;
+  font-size: 5em;
+  border: solid #ffffff 6px;
+}
+section{
+width: 25%;
+margin: 0 auto;
+
+}
+section input{
+  width: 15em;
+  float: right;
+  margin-right: 20%;
+}
