@@ -72,7 +72,8 @@ namespace ConvertCSV
                     c.school = parts[4];
                     //Conf,G,MP,FG,FGA,2P,2PA,3P,3PA,FT,FTA,ORB,DRB,TRB,AST,STL,BLK,TOV,PF,PTS
                     c.Class = parts[5];
-                    c.Games = int.Parse(parts[6]) / s;
+                    if (parts[6] == "") c.Games = -1;
+                    else c.Games = int.Parse(parts[6]) / s;
                     //c.Mp = int.Parse(parts[7]);
 
                     c.FG = int.Parse(parts[8]) / s;
@@ -103,11 +104,7 @@ namespace ConvertCSV
                     //c.PF = int.Parse(parts[23]);
                     c.PTS = int.Parse(parts[24]) / s;
 
-                    if (c.Player == @"Omar Cooper\omar-cooper-1")
-                    {
-                        Console.WriteLine("here");
-                    }
-                    collegeStatsList.Add(c);
+                    if(c.Games != -1) collegeStatsList.Add(c);
                     line = reader.ReadLine();
                 }
             }//end read college stats
