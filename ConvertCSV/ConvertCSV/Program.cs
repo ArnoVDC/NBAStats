@@ -20,6 +20,8 @@ namespace ConvertCSV
             List<AllStats> allStatsList = new List<AllStats>();
             List<CollegeStats> freshCollegeList = new List<CollegeStats>();
             List<String> _schools = new List<string>();
+            List<CollegeStats> collegePicked = new List<CollegeStats>();
+            List<CollegeStats> collegeUnpicked = new List<CollegeStats>();
 
             int PlayersNotFound = 0;
 
@@ -143,8 +145,10 @@ namespace ConvertCSV
                     {
                         //player in nba
                         pl.Picked = true;
+                        collegePicked.Add(pl);
                     }
                 }
+                if (!pl.Picked) collegeUnpicked.Add(pl);
             }
             string addTitle = ",";
             foreach(String s in _schools)
@@ -152,6 +156,24 @@ namespace ConvertCSV
                 addTitle += s + ",";
             }
             addTitle.Substring(0, addTitle.Length -1);
+
+            //equal lists
+            Console.WriteLine("Balance unpicked and picked");
+            collegeStatsList.Clear();
+            collegeStatsList.AddRange(collegePicked);
+
+            List<CollegeStats> randomList = new List<CollegeStats>();
+
+            Random r = new Random();
+            int randomIndex = 0;
+            for(int i = 0; i<collegePicked.Count; i++)
+            {
+                randomIndex = r.Next(0, collegeUnpicked.Count); //Choose a random object in the list
+                randomList.Add(collegeUnpicked[randomIndex]); //add it to the new, random list
+                collegeUnpicked.RemoveAt(randomIndex); //remove to avoid duplicates
+            }
+            collegeStatsList.AddRange(randomList);
+
 
 
             Console.WriteLine("Writing file");
