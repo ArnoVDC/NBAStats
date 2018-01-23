@@ -12,6 +12,26 @@ $(document).ready(function () {
   });
 });
 
+function disableSection(id){
+  document.getElementById(id).className="invissible";
+}
+function enableSection(id){
+  document.getElementById(id).className="visible";
+}
+
+function gotPicked(){
+  disableSection("entry");
+  enableSection("picked");
+}
+function notPicked(){
+  disableSection("entry");
+  enableSection("notPicked");
+}
+function newEntry(){
+  enableSection(id);
+}
+
+
 function post(form) {
   var http = new XMLHttpRequest();
   var url = "";
@@ -28,15 +48,22 @@ function post(form) {
     ";BLK=" + document.getElementById("BLK").value +
     ";PTS=" + document.getElementById("PTS").value + ";"
 
-    
+
   http.open("POST", url, true);
   http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   http.onreadystatechange = function () {//Call a function when the state changes.
     if (http.readyState == 4 && http.status == 200) {
-      alert(http.responseText);
-
+      if(http.responseText == "true"){
+        //picked
+        gotPicked();
+      }
+      else{
+        //notpicked
+        notPicked();
+      }
     }
   }
+
   http.send(params);
   console.log(params);
   console.info("post send");
