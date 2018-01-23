@@ -1,0 +1,1910 @@
+[
+ {
+   "Id": 1,
+   "School": "Abilene Christian Wildcats"
+ },
+ {
+   "Id": 2,
+   "School": "Air Force Falcons"
+ },
+ {
+   "Id": 3,
+   "School": "Akron Zips"
+ },
+ {
+   "Id": 4,
+   "School": "Alabama A&M Bulldogs"
+ },
+ {
+   "Id": 5,
+   "School": "Alabama Crimson Tide"
+ },
+ {
+   "Id": 6,
+   "School": "Alabama State Hornets"
+ },
+ {
+   "Id": 7,
+   "School": "Alabama-Birmingham Blazers"
+ },
+ {
+   "Id": 8,
+   "School": "Albany (NY) Great Danes"
+ },
+ {
+   "Id": 9,
+   "School": "Alcorn State Braves"
+ },
+ {
+   "Id": 10,
+   "School": "Allegheny Gators"
+ },
+ {
+   "Id": 11,
+   "School": "American Eagles"
+ },
+ {
+   "Id": 12,
+   "School": "Amherst Lord Jeffs"
+ },
+ {
+   "Id": 13,
+   "School": "Appalachian State Mountaineers"
+ },
+ {
+   "Id": 14,
+   "School": "Arizona State Sun Devils"
+ },
+ {
+   "Id": 15,
+   "School": "Arizona Wildcats"
+ },
+ {
+   "Id": 16,
+   "School": "Arkansas Razorbacks"
+ },
+ {
+   "Id": 17,
+   "School": "Arkansas State Red Wolves"
+ },
+ {
+   "Id": 18,
+   "School": "Arkansas-Little Rock Trojans"
+ },
+ {
+   "Id": 19,
+   "School": "Arkansas-Pine Bluff Golden Lions"
+ },
+ {
+   "Id": 20,
+   "School": "Armstrong Pirates"
+ },
+ {
+   "Id": 21,
+   "School": "Army Black Knights"
+ },
+ {
+   "Id": 22,
+   "School": "Auburn Tigers"
+ },
+ {
+   "Id": 23,
+   "School": "Augusta State Jaguars"
+ },
+ {
+   "Id": 24,
+   "School": "Augustana (IL) Vikings"
+ },
+ {
+   "Id": 25,
+   "School": "Austin Peay Governors"
+ },
+ {
+   "Id": 26,
+   "School": "Baker University Wildcats"
+ },
+ {
+   "Id": 27,
+   "School": "Baldwin-Wallace Yellow Jackets"
+ },
+ {
+   "Id": 28,
+   "School": "Ball State Cardinals"
+ },
+ {
+   "Id": 29,
+   "School": "Baltimore Super Bees"
+ },
+ {
+   "Id": 30,
+   "School": "Baylor Bears"
+ },
+ {
+   "Id": 31,
+   "School": "Belmont Bruins"
+ },
+ {
+   "Id": 32,
+   "School": "Beloit Buccaneers"
+ },
+ {
+   "Id": 33,
+   "School": "Bethune-Cookman Wildcats"
+ },
+ {
+   "Id": 34,
+   "School": "Binghamton Bearcats"
+ },
+ {
+   "Id": 35,
+   "School": "Birmingham-Southern Panthers"
+ },
+ {
+   "Id": 36,
+   "School": "Bloomsburg Huskies"
+ },
+ {
+   "Id": 37,
+   "School": "Boise State Broncos"
+ },
+ {
+   "Id": 38,
+   "School": "Boston College Eagles"
+ },
+ {
+   "Id": 39,
+   "School": "Boston University Terriers"
+ },
+ {
+   "Id": 40,
+   "School": "Bowling Green State Falcons"
+ },
+ {
+   "Id": 41,
+   "School": "Bradley Braves"
+ },
+ {
+   "Id": 42,
+   "School": "Brigham Young College"
+ },
+ {
+   "Id": 43,
+   "School": "Brigham Young Cougars"
+ },
+ {
+   "Id": 44,
+   "School": "Brooklyn Bulldogs"
+ },
+ {
+   "Id": 45,
+   "School": "Brown Bears"
+ },
+ {
+   "Id": 46,
+   "School": "Bryant Bulldogs"
+ },
+ {
+   "Id": 47,
+   "School": "Bucknell Bison"
+ },
+ {
+   "Id": 48,
+   "School": "Buffalo Bulls"
+ },
+ {
+   "Id": 49,
+   "School": "Butler Bulldogs"
+ },
+ {
+   "Id": 50,
+   "School": "Cal Poly Mustangs"
+ },
+ {
+   "Id": 51,
+   "School": "Cal State Bakersfield Roadrunners"
+ },
+ {
+   "Id": 52,
+   "School": "Cal State Fullerton Titans"
+ },
+ {
+   "Id": 53,
+   "School": "Cal State Los Angeles Golden Eagles"
+ },
+ {
+   "Id": 54,
+   "School": "Cal State Northridge Matadors"
+ },
+ {
+   "Id": 55,
+   "School": "Campbell Fighting Camels"
+ },
+ {
+   "Id": 56,
+   "School": "Canisius Golden Griffins"
+ },
+ {
+   "Id": 57,
+   "School": "Carleton College Knights"
+ },
+ {
+   "Id": 58,
+   "School": "Carnegie Mellon Tartans"
+ },
+ {
+   "Id": 59,
+   "School": "Case Western Reserve Spartans"
+ },
+ {
+   "Id": 60,
+   "School": "Catholic Cardinals"
+ },
+ {
+   "Id": 61,
+   "School": "Centenary (LA) Gents"
+ },
+ {
+   "Id": 62,
+   "School": "Central Arkansas Bears"
+ },
+ {
+   "Id": 63,
+   "School": "Central Connecticut State Blue Devils"
+ },
+ {
+   "Id": 64,
+   "School": "Central Florida Knights"
+ },
+ {
+   "Id": 65,
+   "School": "Central Michigan Chippewas"
+ },
+ {
+   "Id": 66,
+   "School": "Central Missouri Mules"
+ },
+ {
+   "Id": 67,
+   "School": "Central Normal College"
+ },
+ {
+   "Id": 68,
+   "School": "Central Pennsylvania College Knights"
+ },
+ {
+   "Id": 69,
+   "School": "Centre (KY) Colonels"
+ },
+ {
+   "Id": 70,
+   "School": "Charleston Southern Buccaneers"
+ },
+ {
+   "Id": 71,
+   "School": "Charlotte 49ers"
+ },
+ {
+   "Id": 72,
+   "School": "Chattanooga Mocs"
+ },
+ {
+   "Id": 73,
+   "School": "Cheyenne Business College"
+ },
+ {
+   "Id": 74,
+   "School": "Chicago Maroons"
+ },
+ {
+   "Id": 75,
+   "School": "Chicago State Cougars"
+ },
+ {
+   "Id": 76,
+   "School": "Cincinnati Bearcats"
+ },
+ {
+   "Id": 77,
+   "School": "Citadel Bulldogs"
+ },
+ {
+   "Id": 78,
+   "School": "City College of New York Beavers"
+ },
+ {
+   "Id": 79,
+   "School": "Clemson Tigers"
+ },
+ {
+   "Id": 80,
+   "School": "Cleveland State Vikings"
+ },
+ {
+   "Id": 81,
+   "School": "Coastal Carolina Chanticleers"
+ },
+ {
+   "Id": 82,
+   "School": "Colgate Raiders"
+ },
+ {
+   "Id": 83,
+   "School": "College of Charleston Cougars"
+ },
+ {
+   "Id": 84,
+   "School": "College of New Jersey Lions"
+ },
+ {
+   "Id": 85,
+   "School": "Colorado Buffaloes"
+ },
+ {
+   "Id": 86,
+   "School": "Colorado College Tigers"
+ },
+ {
+   "Id": 87,
+   "School": "Colorado School of Mines Orediggers"
+ },
+ {
+   "Id": 88,
+   "School": "Colorado State Rams"
+ },
+ {
+   "Id": 89,
+   "School": "Columbia Lions"
+ },
+ {
+   "Id": 90,
+   "School": "Concordia Seminary Preachers"
+ },
+ {
+   "Id": 91,
+   "School": "Connecticut Huskies"
+ },
+ {
+   "Id": 92,
+   "School": "Coppin State Eagles"
+ },
+ {
+   "Id": 93,
+   "School": "Cornell Big Red"
+ },
+ {
+   "Id": 94,
+   "School": "Cotner University"
+ },
+ {
+   "Id": 95,
+   "School": "Creighton Bluejays"
+ },
+ {
+   "Id": 96,
+   "School": "Cumberland University Bulldogs"
+ },
+ {
+   "Id": 97,
+   "School": "Dakota Wesleyan Tigers"
+ },
+ {
+   "Id": 98,
+   "School": "Dartmouth Big Green"
+ },
+ {
+   "Id": 99,
+   "School": "Davidson Wildcats"
+ },
+ {
+   "Id": 100,
+   "School": "Dayton Flyers"
+ },
+ {
+   "Id": 101,
+   "School": "Delaware Fightin' Blue Hens"
+ },
+ {
+   "Id": 102,
+   "School": "Delaware State Hornets"
+ },
+ {
+   "Id": 103,
+   "School": "Denison Big Red"
+ },
+ {
+   "Id": 104,
+   "School": "Denver Pioneers"
+ },
+ {
+   "Id": 105,
+   "School": "DePaul Blue Demons"
+ },
+ {
+   "Id": 106,
+   "School": "DePauw Tigers"
+ },
+ {
+   "Id": 107,
+   "School": "Detroit Mercy Titans"
+ },
+ {
+   "Id": 108,
+   "School": "Dickinson College Red Devils"
+ },
+ {
+   "Id": 109,
+   "School": "Drake Bulldogs"
+ },
+ {
+   "Id": 110,
+   "School": "Drexel Dragons"
+ },
+ {
+   "Id": 111,
+   "School": "Duke Blue Devils"
+ },
+ {
+   "Id": 112,
+   "School": "Duquesne Dukes"
+ },
+ {
+   "Id": 113,
+   "School": "East Carolina Pirates"
+ },
+ {
+   "Id": 114,
+   "School": "East Central Tigers"
+ },
+ {
+   "Id": 115,
+   "School": "East Tennessee State Buccaneers"
+ },
+ {
+   "Id": 116,
+   "School": "Eastern Illinois Panthers"
+ },
+ {
+   "Id": 117,
+   "School": "Eastern Kentucky Colonels"
+ },
+ {
+   "Id": 118,
+   "School": "Eastern Michigan Eagles"
+ },
+ {
+   "Id": 119,
+   "School": "Eastern Washington Eagles"
+ },
+ {
+   "Id": 120,
+   "School": "Elon Phoenix"
+ },
+ {
+   "Id": 121,
+   "School": "Emporia State Hornets"
+ },
+ {
+   "Id": 122,
+   "School": "Evansville Purple Aces"
+ },
+ {
+   "Id": 123,
+   "School": "Fairfield Stags"
+ },
+ {
+   "Id": 124,
+   "School": "Fairleigh Dickinson Knights"
+ },
+ {
+   "Id": 125,
+   "School": "Florida A&M Rattlers"
+ },
+ {
+   "Id": 126,
+   "School": "Florida Atlantic Owls"
+ },
+ {
+   "Id": 127,
+   "School": "Florida Gators"
+ },
+ {
+   "Id": 128,
+   "School": "Florida Gulf Coast Eagles"
+ },
+ {
+   "Id": 129,
+   "School": "Florida International Panthers"
+ },
+ {
+   "Id": 130,
+   "School": "Florida State Seminoles"
+ },
+ {
+   "Id": 131,
+   "School": "Fordham Rams"
+ },
+ {
+   "Id": 132,
+   "School": "Franklin Grizzlies"
+ },
+ {
+   "Id": 133,
+   "School": "Fresno State Bulldogs"
+ },
+ {
+   "Id": 134,
+   "School": "Furman Paladins"
+ },
+ {
+   "Id": 135,
+   "School": "Gardner-Webb Runnin' Bulldogs"
+ },
+ {
+   "Id": 136,
+   "School": "Geneva Golden Tornadoes"
+ },
+ {
+   "Id": 137,
+   "School": "George Mason Patriots"
+ },
+ {
+   "Id": 138,
+   "School": "George Washington Colonials"
+ },
+ {
+   "Id": 139,
+   "School": "Georgetown Hoyas"
+ },
+ {
+   "Id": 140,
+   "School": "Georgia Bulldogs"
+ },
+ {
+   "Id": 141,
+   "School": "Georgia Southern Eagles"
+ },
+ {
+   "Id": 142,
+   "School": "Georgia State Panthers"
+ },
+ {
+   "Id": 143,
+   "School": "Georgia Tech Yellow Jackets"
+ },
+ {
+   "Id": 144,
+   "School": "Gettysburg Bullets"
+ },
+ {
+   "Id": 145,
+   "School": "Gonzaga Bulldogs"
+ },
+ {
+   "Id": 146,
+   "School": "Grambling Tigers"
+ },
+ {
+   "Id": 147,
+   "School": "Grand Canyon Antelopes"
+ },
+ {
+   "Id": 148,
+   "School": "Green Bay Phoenix"
+ },
+ {
+   "Id": 149,
+   "School": "Grinnell Pioneers"
+ },
+ {
+   "Id": 150,
+   "School": "Grove City Wolverines"
+ },
+ {
+   "Id": 151,
+   "School": "Hamline Pipers"
+ },
+ {
+   "Id": 152,
+   "School": "Hampton Pirates"
+ },
+ {
+   "Id": 153,
+   "School": "Hardin-Simmons Cowboys"
+ },
+ {
+   "Id": 154,
+   "School": "Hartford Hawks"
+ },
+ {
+   "Id": 155,
+   "School": "Harvard Crimson"
+ },
+ {
+   "Id": 156,
+   "School": "Haskell Indian Nations Institute Fighting Indians"
+ },
+ {
+   "Id": 157,
+   "School": "Hawaii Warriors"
+ },
+ {
+   "Id": 158,
+   "School": "High Point Panthers"
+ },
+ {
+   "Id": 159,
+   "School": "Hiram Terriers"
+ },
+ {
+   "Id": 160,
+   "School": "Hofstra Pride"
+ },
+ {
+   "Id": 161,
+   "School": "Holy Cross Crusaders"
+ },
+ {
+   "Id": 162,
+   "School": "Hope Flying Dutchmen"
+ },
+ {
+   "Id": 163,
+   "School": "Houston Baptist Huskies"
+ },
+ {
+   "Id": 164,
+   "School": "Houston Cougars"
+ },
+ {
+   "Id": 165,
+   "School": "Howard Bison"
+ },
+ {
+   "Id": 166,
+   "School": "Idaho State Bengals"
+ },
+ {
+   "Id": 167,
+   "School": "Idaho Vandals"
+ },
+ {
+   "Id": 168,
+   "School": "Illinois Fighting Illini"
+ },
+ {
+   "Id": 169,
+   "School": "Illinois State Redbirds"
+ },
+ {
+   "Id": 170,
+   "School": "Illinois Wesleyan Titans"
+ },
+ {
+   "Id": 171,
+   "School": "Illinois-Chicago Flames"
+ },
+ {
+   "Id": 172,
+   "School": "Incarnate Word Cardinals"
+ },
+ {
+   "Id": 173,
+   "School": "Indiana Hoosiers"
+ },
+ {
+   "Id": 174,
+   "School": "Indiana State Sycamores"
+ },
+ {
+   "Id": 175,
+   "School": "Iona Gaels"
+ },
+ {
+   "Id": 176,
+   "School": "Iowa Hawkeyes"
+ },
+ {
+   "Id": 177,
+   "School": "Iowa State Cyclones"
+ },
+ {
+   "Id": 178,
+   "School": "IPFW Mastodons"
+ },
+ {
+   "Id": 179,
+   "School": "IUPUI Jaguars"
+ },
+ {
+   "Id": 180,
+   "School": "Jackson State Tigers"
+ },
+ {
+   "Id": 181,
+   "School": "Jacksonville Dolphins"
+ },
+ {
+   "Id": 182,
+   "School": "Jacksonville State Gamecocks"
+ },
+ {
+   "Id": 183,
+   "School": "James Madison Dukes"
+ },
+ {
+   "Id": 184,
+   "School": "John Carroll Blue Streaks"
+ },
+ {
+   "Id": 185,
+   "School": "Kalamazoo Hornets"
+ },
+ {
+   "Id": 186,
+   "School": "Kansas Jayhawks"
+ },
+ {
+   "Id": 187,
+   "School": "Kansas State Wildcats"
+ },
+ {
+   "Id": 188,
+   "School": "Kennesaw State Owls"
+ },
+ {
+   "Id": 189,
+   "School": "Kent State Golden Flashes"
+ },
+ {
+   "Id": 190,
+   "School": "Kentucky Wesleyan Panthers"
+ },
+ {
+   "Id": 191,
+   "School": "Kentucky Wildcats"
+ },
+ {
+   "Id": 192,
+   "School": "La Salle Explorers"
+ },
+ {
+   "Id": 193,
+   "School": "Lafayette Leopards"
+ },
+ {
+   "Id": 194,
+   "School": "Lake Forest Foresters"
+ },
+ {
+   "Id": 195,
+   "School": "Lamar Cardinals"
+ },
+ {
+   "Id": 196,
+   "School": "Latter Day Saints University"
+ },
+ {
+   "Id": 197,
+   "School": "Lawrence Vikings"
+ },
+ {
+   "Id": 198,
+   "School": "Lehigh Mountain Hawks"
+ },
+ {
+   "Id": 199,
+   "School": "Lewis University Flyers"
+ },
+ {
+   "Id": 200,
+   "School": "Liberty Flames"
+ },
+ {
+   "Id": 201,
+   "School": "Lipscomb Bisons"
+ },
+ {
+   "Id": 202,
+   "School": "Long Beach State 49ers"
+ },
+ {
+   "Id": 203,
+   "School": "Long Island University Blackbirds"
+ },
+ {
+   "Id": 204,
+   "School": "Longwood Lancers"
+ },
+ {
+   "Id": 205,
+   "School": "Louisiana State Fighting Tigers"
+ },
+ {
+   "Id": 206,
+   "School": "Louisiana Tech Bulldogs"
+ },
+ {
+   "Id": 207,
+   "School": "Louisiana-Lafayette Ragin' Cajuns"
+ },
+ {
+   "Id": 208,
+   "School": "Louisiana-Monroe Warhawks"
+ },
+ {
+   "Id": 209,
+   "School": "Louisville Cardinals"
+ },
+ {
+   "Id": 210,
+   "School": "Loyola (IL) Ramblers"
+ },
+ {
+   "Id": 211,
+   "School": "Loyola (LA) Wolfpack"
+ },
+ {
+   "Id": 212,
+   "School": "Loyola (MD) Greyhounds"
+ },
+ {
+   "Id": 213,
+   "School": "Loyola Marymount Lions"
+ },
+ {
+   "Id": 214,
+   "School": "Macalester Scots"
+ },
+ {
+   "Id": 215,
+   "School": "Maine Black Bears"
+ },
+ {
+   "Id": 216,
+   "School": "Manchester Spartans"
+ },
+ {
+   "Id": 217,
+   "School": "Manhattan Jaspers"
+ },
+ {
+   "Id": 218,
+   "School": "Marietta Pioneers"
+ },
+ {
+   "Id": 219,
+   "School": "Marist Red Foxes"
+ },
+ {
+   "Id": 220,
+   "School": "Marquette Golden Eagles"
+ },
+ {
+   "Id": 221,
+   "School": "Marshall Thundering Herd"
+ },
+ {
+   "Id": 222,
+   "School": "Maryland Terrapins"
+ },
+ {
+   "Id": 223,
+   "School": "Maryland-Baltimore County Retrievers"
+ },
+ {
+   "Id": 224,
+   "School": "Maryland-Eastern Shore Hawks"
+ },
+ {
+   "Id": 225,
+   "School": "Massachusetts Institute of Technology Engineers"
+ },
+ {
+   "Id": 226,
+   "School": "Massachusetts Minutemen"
+ },
+ {
+   "Id": 227,
+   "School": "Massachusetts-Lowell River Hawks"
+ },
+ {
+   "Id": 228,
+   "School": "McNeese State Cowboys"
+ },
+ {
+   "Id": 229,
+   "School": "Memphis Tigers"
+ },
+ {
+   "Id": 230,
+   "School": "Mercer Bears"
+ },
+ {
+   "Id": 231,
+   "School": "Merchant Marine Academy Mariners"
+ },
+ {
+   "Id": 232,
+   "School": "Miami (FL) Hurricanes"
+ },
+ {
+   "Id": 233,
+   "School": "Miami (OH) RedHawks"
+ },
+ {
+   "Id": 234,
+   "School": "Michigan State Spartans"
+ },
+ {
+   "Id": 235,
+   "School": "Michigan Wolverines"
+ },
+ {
+   "Id": 236,
+   "School": "Middle Tennessee Blue Raiders"
+ },
+ {
+   "Id": 237,
+   "School": "Millikin Big Blue"
+ },
+ {
+   "Id": 238,
+   "School": "Millsaps Majors"
+ },
+ {
+   "Id": 239,
+   "School": "Milwaukee Panthers"
+ },
+ {
+   "Id": 240,
+   "School": "Minnesota A&M Aggies"
+ },
+ {
+   "Id": 241,
+   "School": "Minnesota Golden Gophers"
+ },
+ {
+   "Id": 242,
+   "School": "Mississippi Rebels"
+ },
+ {
+   "Id": 243,
+   "School": "Mississippi State Bulldogs"
+ },
+ {
+   "Id": 244,
+   "School": "Mississippi Valley State Delta Devils"
+ },
+ {
+   "Id": 245,
+   "School": "Missouri State Bears"
+ },
+ {
+   "Id": 246,
+   "School": "Missouri Tigers"
+ },
+ {
+   "Id": 247,
+   "School": "Missouri-Kansas City Kangaroos"
+ },
+ {
+   "Id": 248,
+   "School": "Monmouth Hawks"
+ },
+ {
+   "Id": 249,
+   "School": "Montana Grizzlies"
+ },
+ {
+   "Id": 250,
+   "School": "Montana State Bobcats"
+ },
+ {
+   "Id": 251,
+   "School": "Morehead State Eagles"
+ },
+ {
+   "Id": 252,
+   "School": "Morgan State Bears"
+ },
+ {
+   "Id": 253,
+   "School": "Morris Brown Wolverines"
+ },
+ {
+   "Id": 254,
+   "School": "Mount St. Mary's Mountaineers"
+ },
+ {
+   "Id": 255,
+   "School": "Mount Union Purple Raiders"
+ },
+ {
+   "Id": 256,
+   "School": "Muhlenburg Mules"
+ },
+ {
+   "Id": 257,
+   "School": "Murray State Racers"
+ },
+ {
+   "Id": 258,
+   "School": "Muskingum Fighting Muskies"
+ },
+ {
+   "Id": 259,
+   "School": "Navy Midshipmen"
+ },
+ {
+   "Id": 260,
+   "School": "Nebraska Cornhuskers"
+ },
+ {
+   "Id": 261,
+   "School": "Nebraska Wesleyan Prairie Wolves"
+ },
+ {
+   "Id": 262,
+   "School": "Nebraska-Omaha Mavericks"
+ },
+ {
+   "Id": 263,
+   "School": "Nevada Wolf Pack"
+ },
+ {
+   "Id": 264,
+   "School": "Nevada-Las Vegas Rebels"
+ },
+ {
+   "Id": 265,
+   "School": "New Hampshire Wildcats"
+ },
+ {
+   "Id": 266,
+   "School": "New Mexico Lobos"
+ },
+ {
+   "Id": 267,
+   "School": "New Mexico State Aggies"
+ },
+ {
+   "Id": 268,
+   "School": "New Orleans Privateers"
+ },
+ {
+   "Id": 269,
+   "School": "New York University Violets"
+ },
+ {
+   "Id": 270,
+   "School": "Newberry Wolves"
+ },
+ {
+   "Id": 271,
+   "School": "Niagara Purple Eagles"
+ },
+ {
+   "Id": 272,
+   "School": "Nicholls State Colonels"
+ },
+ {
+   "Id": 273,
+   "School": "NJIT Highlanders"
+ },
+ {
+   "Id": 274,
+   "School": "Norfolk State Spartans"
+ },
+ {
+   "Id": 275,
+   "School": "North Carolina A&T Aggies"
+ },
+ {
+   "Id": 276,
+   "School": "North Carolina Central Eagles"
+ },
+ {
+   "Id": 277,
+   "School": "North Carolina State Wolfpack"
+ },
+ {
+   "Id": 278,
+   "School": "North Carolina Tar Heels"
+ },
+ {
+   "Id": 279,
+   "School": "North Carolina-Asheville Bulldogs"
+ },
+ {
+   "Id": 280,
+   "School": "North Carolina-Greensboro Spartans"
+ },
+ {
+   "Id": 281,
+   "School": "North Carolina-Wilmington Seahawks"
+ },
+ {
+   "Id": 282,
+   "School": "North Central Cardinals"
+ },
+ {
+   "Id": 283,
+   "School": "North Dakota State Bison"
+ },
+ {
+   "Id": 284,
+   "School": "North Dakota UND"
+ },
+ {
+   "Id": 285,
+   "School": "North Florida Ospreys"
+ },
+ {
+   "Id": 286,
+   "School": "North Texas Mean Green"
+ },
+ {
+   "Id": 287,
+   "School": "Northeastern Huskies"
+ },
+ {
+   "Id": 288,
+   "School": "Northeastern Illinois Golden Eagles"
+ },
+ {
+   "Id": 289,
+   "School": "Northern Arizona Lumberjacks"
+ },
+ {
+   "Id": 290,
+   "School": "Northern Colorado Bears"
+ },
+ {
+   "Id": 291,
+   "School": "Northern Illinois Huskies"
+ },
+ {
+   "Id": 292,
+   "School": "Northern Iowa Panthers"
+ },
+ {
+   "Id": 293,
+   "School": "Northern Kentucky Norse"
+ },
+ {
+   "Id": 294,
+   "School": "Northwest Missouri State Bearcats"
+ },
+ {
+   "Id": 295,
+   "School": "Northwestern State Demons"
+ },
+ {
+   "Id": 296,
+   "School": "Northwestern Wildcats"
+ },
+ {
+   "Id": 297,
+   "School": "Notre Dame Fighting Irish"
+ },
+ {
+   "Id": 298,
+   "School": "Oakland Golden Grizzlies"
+ },
+ {
+   "Id": 299,
+   "School": "Oberlin Yeomen"
+ },
+ {
+   "Id": 300,
+   "School": "Ohio Bobcats"
+ },
+ {
+   "Id": 301,
+   "School": "Ohio State Buckeyes"
+ },
+ {
+   "Id": 302,
+   "School": "Ohio Wesleyan Battling Bishops"
+ },
+ {
+   "Id": 303,
+   "School": "Oklahoma City Chiefs"
+ },
+ {
+   "Id": 304,
+   "School": "Oklahoma Sooners"
+ },
+ {
+   "Id": 305,
+   "School": "Oklahoma State Cowboys"
+ },
+ {
+   "Id": 306,
+   "School": "Old Dominion Monarchs"
+ },
+ {
+   "Id": 307,
+   "School": "Oral Roberts Golden Eagles"
+ },
+ {
+   "Id": 308,
+   "School": "Oregon Ducks"
+ },
+ {
+   "Id": 309,
+   "School": "Oregon State Beavers"
+ },
+ {
+   "Id": 310,
+   "School": "Pacific Tigers"
+ },
+ {
+   "Id": 311,
+   "School": "Penn State Nittany Lions"
+ },
+ {
+   "Id": 312,
+   "School": "Pennsylvania Quakers"
+ },
+ {
+   "Id": 313,
+   "School": "Pepperdine Waves"
+ },
+ {
+   "Id": 314,
+   "School": "Phillips Haymakers"
+ },
+ {
+   "Id": 315,
+   "School": "Pittsburg State Gorillas"
+ },
+ {
+   "Id": 316,
+   "School": "Pittsburgh Panthers"
+ },
+ {
+   "Id": 317,
+   "School": "Portland Pilots"
+ },
+ {
+   "Id": 318,
+   "School": "Portland State Vikings"
+ },
+ {
+   "Id": 319,
+   "School": "Prairie View Panthers"
+ },
+ {
+   "Id": 320,
+   "School": "Pratt Institute Cannoneers"
+ },
+ {
+   "Id": 321,
+   "School": "Presbyterian Blue Hose"
+ },
+ {
+   "Id": 322,
+   "School": "Princeton Tigers"
+ },
+ {
+   "Id": 323,
+   "School": "Providence Friars"
+ },
+ {
+   "Id": 324,
+   "School": "Purdue Boilermakers"
+ },
+ {
+   "Id": 325,
+   "School": "Quinnipiac Bobcats"
+ },
+ {
+   "Id": 326,
+   "School": "Radford Highlanders"
+ },
+ {
+   "Id": 327,
+   "School": "Regis (CO) Rangers"
+ },
+ {
+   "Id": 328,
+   "School": "Rensselaer Engineers"
+ },
+ {
+   "Id": 329,
+   "School": "Rhode Island Rams"
+ },
+ {
+   "Id": 330,
+   "School": "Rice Owls"
+ },
+ {
+   "Id": 331,
+   "School": "Richmond Spiders"
+ },
+ {
+   "Id": 332,
+   "School": "Rider Broncs"
+ },
+ {
+   "Id": 333,
+   "School": "Ripon Red Hawks"
+ },
+ {
+   "Id": 334,
+   "School": "Roanoke Maroons"
+ },
+ {
+   "Id": 335,
+   "School": "Robert Morris Colonials"
+ },
+ {
+   "Id": 336,
+   "School": "Rochester (NY) Yellowjackets"
+ },
+ {
+   "Id": 337,
+   "School": "Rose-Hulman Fightin' Engineers"
+ },
+ {
+   "Id": 338,
+   "School": "Rutgers Scarlet Knights"
+ },
+ {
+   "Id": 339,
+   "School": "Sacramento State Hornets"
+ },
+ {
+   "Id": 340,
+   "School": "Sacred Heart Pioneers"
+ },
+ {
+   "Id": 341,
+   "School": "Saint Francis (PA) Red Flash"
+ },
+ {
+   "Id": 342,
+   "School": "Saint Joseph's Hawks"
+ },
+ {
+   "Id": 343,
+   "School": "Saint Louis Billikens"
+ },
+ {
+   "Id": 344,
+   "School": "Saint Mary's (CA) Gaels"
+ },
+ {
+   "Id": 345,
+   "School": "Saint Peter's Peacocks"
+ },
+ {
+   "Id": 346,
+   "School": "Sam Houston State Bearkats"
+ },
+ {
+   "Id": 347,
+   "School": "Samford Bulldogs"
+ },
+ {
+   "Id": 348,
+   "School": "San Diego State Aztecs"
+ },
+ {
+   "Id": 349,
+   "School": "San Diego Toreros"
+ },
+ {
+   "Id": 350,
+   "School": "San Francisco Dons"
+ },
+ {
+   "Id": 351,
+   "School": "San Jose State Spartans"
+ },
+ {
+   "Id": 352,
+   "School": "Santa Clara Broncos"
+ },
+ {
+   "Id": 353,
+   "School": "Savage School of Physical Education"
+ },
+ {
+   "Id": 354,
+   "School": "Savannah State Tigers"
+ },
+ {
+   "Id": 355,
+   "School": "Scranton Royals"
+ },
+ {
+   "Id": 356,
+   "School": "Seattle Redhawks"
+ },
+ {
+   "Id": 357,
+   "School": "Seton Hall Pirates"
+ },
+ {
+   "Id": 358,
+   "School": "Sewanee Tigers"
+ },
+ {
+   "Id": 359,
+   "School": "Siena Saints"
+ },
+ {
+   "Id": 360,
+   "School": "South Alabama Jaguars"
+ },
+ {
+   "Id": 361,
+   "School": "South Carolina Gamecocks"
+ },
+ {
+   "Id": 362,
+   "School": "South Carolina State Bulldogs"
+ },
+ {
+   "Id": 363,
+   "School": "South Carolina Upstate Spartans"
+ },
+ {
+   "Id": 364,
+   "School": "South Dakota Coyotes"
+ },
+ {
+   "Id": 365,
+   "School": "South Dakota State Jackrabbits"
+ },
+ {
+   "Id": 366,
+   "School": "South Florida Bulls"
+ },
+ {
+   "Id": 367,
+   "School": "Southeast Missouri State Redhawks"
+ },
+ {
+   "Id": 368,
+   "School": "Southeastern Louisiana Lions"
+ },
+ {
+   "Id": 369,
+   "School": "Southern California Trojans"
+ },
+ {
+   "Id": 370,
+   "School": "Southern Illinois Salukis"
+ },
+ {
+   "Id": 371,
+   "School": "Southern Illinois-Edwardsville Cougars"
+ },
+ {
+   "Id": 372,
+   "School": "Southern Jaguars"
+ },
+ {
+   "Id": 373,
+   "School": "Southern Methodist Mustangs"
+ },
+ {
+   "Id": 374,
+   "School": "Southern Mississippi Golden Eagles"
+ },
+ {
+   "Id": 375,
+   "School": "Southern Utah Thunderbirds"
+ },
+ {
+   "Id": 376,
+   "School": "Southwestern (KS) Moundbuilders"
+ },
+ {
+   "Id": 377,
+   "School": "Southwestern (TX) Pirates"
+ },
+ {
+   "Id": 378,
+   "School": "Springfield Pride"
+ },
+ {
+   "Id": 379,
+   "School": "St. Bonaventure Bonnies"
+ },
+ {
+   "Id": 380,
+   "School": "St. Francis (NY) Terriers"
+ },
+ {
+   "Id": 381,
+   "School": "St. John's (NY) Red Storm"
+ },
+ {
+   "Id": 382,
+   "School": "St. John's College (OH)"
+ },
+ {
+   "Id": 383,
+   "School": "St. Lawrence Saints"
+ },
+ {
+   "Id": 384,
+   "School": "Stanford Cardinal"
+ },
+ {
+   "Id": 385,
+   "School": "Stephen F. Austin Lumberjacks"
+ },
+ {
+   "Id": 386,
+   "School": "Stetson Hatters"
+ },
+ {
+   "Id": 387,
+   "School": "Stevens Institute Ducks"
+ },
+ {
+   "Id": 388,
+   "School": "Stony Brook Seawolves"
+ },
+ {
+   "Id": 389,
+   "School": "SUNY-Potsdam Bears"
+ },
+ {
+   "Id": 390,
+   "School": "Swarthmore Garnet"
+ },
+ {
+   "Id": 391,
+   "School": "Syracuse Orange"
+ },
+ {
+   "Id": 392,
+   "School": "Temple Owls"
+ },
+ {
+   "Id": 393,
+   "School": "Tennessee State Tigers"
+ },
+ {
+   "Id": 394,
+   "School": "Tennessee Tech Golden Eagles"
+ },
+ {
+   "Id": 395,
+   "School": "Tennessee Volunteers"
+ },
+ {
+   "Id": 396,
+   "School": "Tennessee-Martin Skyhawks"
+ },
+ {
+   "Id": 397,
+   "School": "Texas A&M Aggies"
+ },
+ {
+   "Id": 398,
+   "School": "Texas A&M-Corpus Christi Islanders"
+ },
+ {
+   "Id": 399,
+   "School": "Texas Christian Horned Frogs"
+ },
+ {
+   "Id": 400,
+   "School": "Texas Longhorns"
+ },
+ {
+   "Id": 401,
+   "School": "Texas Southern Tigers"
+ },
+ {
+   "Id": 402,
+   "School": "Texas State Bobcats"
+ },
+ {
+   "Id": 403,
+   "School": "Texas Tech Red Raiders"
+ },
+ {
+   "Id": 404,
+   "School": "Texas Wesleyan Rams"
+ },
+ {
+   "Id": 405,
+   "School": "Texas-Arlington Mavericks"
+ },
+ {
+   "Id": 406,
+   "School": "Texas-El Paso Miners"
+ },
+ {
+   "Id": 407,
+   "School": "Texas-Rio Grande Valley Vaqueros"
+ },
+ {
+   "Id": 408,
+   "School": "Texas-San Antonio Roadrunners"
+ },
+ {
+   "Id": 409,
+   "School": "Toledo Rockets"
+ },
+ {
+   "Id": 410,
+   "School": "Towson Tigers"
+ },
+ {
+   "Id": 411,
+   "School": "Trinity (CT) Bantams"
+ },
+ {
+   "Id": 412,
+   "School": "Trinity (TX) Tigers"
+ },
+ {
+   "Id": 413,
+   "School": "Troy Trojans"
+ },
+ {
+   "Id": 414,
+   "School": "Tulane Green Wave"
+ },
+ {
+   "Id": 415,
+   "School": "Tulsa Golden Hurricane"
+ },
+ {
+   "Id": 416,
+   "School": "U.S. International Gulls"
+ },
+ {
+   "Id": 417,
+   "School": "UC-Davis Aggies"
+ },
+ {
+   "Id": 418,
+   "School": "UC-Irvine Anteaters"
+ },
+ {
+   "Id": 419,
+   "School": "UC-Riverside Highlanders"
+ },
+ {
+   "Id": 420,
+   "School": "UC-Santa Barbara Gauchos"
+ },
+ {
+   "Id": 421,
+   "School": "UCLA Bruins"
+ },
+ {
+   "Id": 422,
+   "School": "Union (NY) Dutchmen"
+ },
+ {
+   "Id": 423,
+   "School": "University of California Golden Bears"
+ },
+ {
+   "Id": 424,
+   "School": "Utah State Aggies"
+ },
+ {
+   "Id": 425,
+   "School": "Utah Utes"
+ },
+ {
+   "Id": 426,
+   "School": "Utah Valley Wolverines"
+ },
+ {
+   "Id": 427,
+   "School": "Utica Pioneers"
+ },
+ {
+   "Id": 428,
+   "School": "Valparaiso Crusaders"
+ },
+ {
+   "Id": 429,
+   "School": "Vanderbilt Commodores"
+ },
+ {
+   "Id": 430,
+   "School": "Vermont Catamounts"
+ },
+ {
+   "Id": 431,
+   "School": "Villanova Wildcats"
+ },
+ {
+   "Id": 432,
+   "School": "Virginia Cavaliers"
+ },
+ {
+   "Id": 433,
+   "School": "Virginia Commonwealth Rams"
+ },
+ {
+   "Id": 434,
+   "School": "Virginia Military Institute Keydets"
+ },
+ {
+   "Id": 435,
+   "School": "Virginia Tech Hokies"
+ },
+ {
+   "Id": 436,
+   "School": "Wabash Little Giants"
+ },
+ {
+   "Id": 437,
+   "School": "Wagner Seahawks"
+ },
+ {
+   "Id": 438,
+   "School": "Wake Forest Demon Deacons"
+ },
+ {
+   "Id": 439,
+   "School": "Washburn Ichabods"
+ },
+ {
+   "Id": 440,
+   "School": "Washington & Jefferson Presidents"
+ },
+ {
+   "Id": 441,
+   "School": "Washington & Lee Generals"
+ },
+ {
+   "Id": 442,
+   "School": "Washington (MO) Bears"
+ },
+ {
+   "Id": 443,
+   "School": "Washington College Shoremen"
+ },
+ {
+   "Id": 444,
+   "School": "Washington Huskies"
+ },
+ {
+   "Id": 445,
+   "School": "Washington State Cougars"
+ },
+ {
+   "Id": 446,
+   "School": "Wayne State (MI) Warriors"
+ },
+ {
+   "Id": 447,
+   "School": "Weber State Wildcats"
+ },
+ {
+   "Id": 448,
+   "School": "Wesleyan (CT) Cardinals"
+ },
+ {
+   "Id": 449,
+   "School": "West Chester Golden Rams"
+ },
+ {
+   "Id": 450,
+   "School": "West Texas A&M Buffaloes"
+ },
+ {
+   "Id": 451,
+   "School": "West Virginia Mountaineers"
+ },
+ {
+   "Id": 452,
+   "School": "Western Carolina Catamounts"
+ },
+ {
+   "Id": 453,
+   "School": "Western Illinois Leathernecks"
+ },
+ {
+   "Id": 454,
+   "School": "Western Kentucky Hilltoppers"
+ },
+ {
+   "Id": 455,
+   "School": "Western Michigan Broncos"
+ },
+ {
+   "Id": 456,
+   "School": "Western State Mountaineers"
+ },
+ {
+   "Id": 457,
+   "School": "Westminster (MO) Blue Jays"
+ },
+ {
+   "Id": 458,
+   "School": "Westminster (PA) Titans"
+ },
+ {
+   "Id": 459,
+   "School": "Wheaton (IL) Thunder"
+ },
+ {
+   "Id": 460,
+   "School": "Whittier Poets"
+ },
+ {
+   "Id": 461,
+   "School": "Wichita State Shockers"
+ },
+ {
+   "Id": 462,
+   "School": "Widener Pride"
+ },
+ {
+   "Id": 463,
+   "School": "William & Mary Tribe"
+ },
+ {
+   "Id": 464,
+   "School": "Williams Ephs"
+ },
+ {
+   "Id": 465,
+   "School": "Winthrop Eagles"
+ },
+ {
+   "Id": 466,
+   "School": "Wisconsin Badgers"
+ },
+ {
+   "Id": 467,
+   "School": "Wisconsin-Stevens Point Pointers"
+ },
+ {
+   "Id": 468,
+   "School": "Wisconsin-Superior Yellowjackets"
+ },
+ {
+   "Id": 469,
+   "School": "Wittenberg Tigers"
+ },
+ {
+   "Id": 470,
+   "School": "Wofford Terriers"
+ },
+ {
+   "Id": 471,
+   "School": "Wooster Fighting Scots"
+ },
+ {
+   "Id": 472,
+   "School": "Worcester Tech Engineers"
+ },
+ {
+   "Id": 473,
+   "School": "Wright State Raiders"
+ },
+ {
+   "Id": 474,
+   "School": "Wyoming Cowboys"
+ },
+ {
+   "Id": 475,
+   "School": "Xavier Musketeers"
+ },
+ {
+   "Id": 476,
+   "School": "Yale Bulldogs"
+ },
+ {
+   "Id": 477,
+   "School": "Youngstown State Penguins"
+ }
+]
