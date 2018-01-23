@@ -21,7 +21,7 @@
 
 
 
-  <section>
+  <section id="entry">
     <h2>Season stats</h2>
 
     <form onsubmit="post();return false" >
@@ -31,7 +31,7 @@
       </div>
       <div class="form-group">
         <label for="G">Games played</label>
-        <input id="G" type="number" min="1"/>
+        <input id="G" type="number" min="1" max="50" />
       </div>
       <div class="form-group">
         <label for="PTS">Points</label>
@@ -72,10 +72,22 @@
       </div>  
       <button type="submit" id="Calculate" class="btn btn-primary">Calculate</button>
     </form>
-    <div id="result"></div>
-    <div>w</div>
+   
   </section>
 
+  <section id="picked" class="invissible">
+    <h2>You got Picked! Welcome to the NBA</h2>
+    <div>
+      <img src="./img/picked.jfif" alt=""/>
+    </div>
+  </section>
+  <section id="notPicked" class="invissible">
+    <h2>You didn't get picked. Inprove your stats and try again.</h2>
+    <div>
+      <img src="./img/notPicked.jfif" alt=""/>
+    </div>
+
+  </section>
 
 </body>
 

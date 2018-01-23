@@ -31,5 +31,21 @@ section input{
 }
 section h2{
   text-align: center;
-  font-size: 3.5em; 
+  font-size: 3.5em;
+  width: 100%;  
+}
+#picked, #notPicked{
+  width: 100%;
+  height: 100vh;
+}
+
+.invissible{
+  display: none;
+}
+.visible{
+  display: block;
+}
+#picked div, #notPicked div{
+  margin: 0 auto;
+  text-align: center;
 }
