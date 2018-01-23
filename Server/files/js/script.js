@@ -15,7 +15,7 @@ $(document).ready(function () {
 function post(form) {
   var http = new XMLHttpRequest();
   var url = "";
-  var params = "data=hello";
+  var params = "data=hello;data2=hello2";
   http.open("POST", url, true);
   http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   http.onreadystatechange = function () {//Call a function when the state changes.
