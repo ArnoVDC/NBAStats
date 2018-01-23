@@ -12,8 +12,7 @@ $(document).ready(function () {
   });
 });
 
-
--function post() {
+function post(form){
   var http = new XMLHttpRequest();
   var url = "";
   var params = "data=hello";
@@ -26,4 +25,6 @@ $(document).ready(function () {
   }
   http.send(params);
   console.info("post send");
+  return false; //so the page doesn't reload
 }
+console.log("script loaded");
