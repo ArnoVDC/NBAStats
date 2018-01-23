@@ -27,7 +27,7 @@ namespace ConvertCSV
 
             Console.WriteLine("Reading NBA Stats");
             //reading first list
-            using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\NBAStats.csv"))
+            using (var reader = new System.IO.StreamReader(@"C:\Users\arnov\Documents\Github\NBAStats\ConvertCSV\ConvertCSV\NBAStats.csv"))
             {
                 reader.ReadLine(); //ignore first line
                 reader.ReadLine();
@@ -56,7 +56,7 @@ namespace ConvertCSV
             }//end read nba stats
 
             Console.WriteLine("Reading College Stats");
-            using (var reader = new System.IO.StreamReader(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\College.csv"))
+            using (var reader = new System.IO.StreamReader(@"C:\Users\arnov\Documents\Github\NBAStats\ConvertCSV\ConvertCSV/College.csv"))
             {
                 reader.ReadLine(); //ignore first line
                 reader.ReadLine();
@@ -130,7 +130,27 @@ namespace ConvertCSV
                         
                         };
             }
+            _schools.Sort();
+            Console.WriteLine("Writeing schools json");
 
+            using (var writer = new StreamWriter(@"C:\Users\arnov\Documents\Github\NBAStats\ConvertCSV\ConvertCSV\schools.json"))
+            {
+                writer.WriteLine("[");
+                int k = 1; 
+                foreach(string school in _schools)
+                {
+                    writer.WriteLine("{");
+                    writer.WriteLine("\"Id\":" + k + ",");
+                    writer.WriteLine("\"School\":\"" + school + "\"");
+
+                    writer.WriteLine("},");
+                    k++;
+                }
+
+                writer.WriteLine("]");
+                writer.Flush();
+            }
+            Console.WriteLine(_schools.Count);
 
             Console.WriteLine("Searching picked players");
             //search if player is picked
@@ -178,7 +198,7 @@ namespace ConvertCSV
 
             Console.WriteLine("Writing file");
             //write csv
-            using (var writer = new StreamWriter(@"C:\Users\Arno\Documents\GitHub\NBAStats\ConvertCSV\ConvertCSV\Output.csv"))
+            using (var writer = new StreamWriter(@"C:\Users\arnov\Documents\Github\NBAStats\ConvertCSV\ConvertCSV\Output.csv"))
             {
                 //headers
                 writer.WriteLine("Player,Class,Season,Position,School,Games,FG,2P,3P," +
