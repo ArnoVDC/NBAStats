@@ -25,6 +25,5 @@ function post(form) {
   }
   http.send(params);
   console.info("post send");
-  return false; //so the page doesn't reload
 }
 console.log("script loaded");
