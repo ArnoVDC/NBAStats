@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1{
+  padding: 0.2em;
+  text-align: center;
+  color: #FFF719;
+  font-size: 5em;
+  border: solid #FFF719 10px;
+}
+section{
+width: 25%;
+margin: 0 auto;
+
+}
+section input{
+  width: 15em;
+  float: right;
+  margin-right: 20%;
+}
+section h2{
+  text-align: center;
+  font-size: 3.5em; 
+}
