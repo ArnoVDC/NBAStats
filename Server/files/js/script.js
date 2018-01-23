@@ -12,7 +12,7 @@ $(document).ready(function () {
   });
 });
 
-function post(form){
+function post(form) {
   var http = new XMLHttpRequest();
   var url = "";
   var params = "data=hello";
